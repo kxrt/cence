@@ -355,6 +355,30 @@
         animation-fill-mode: forwards;
       }
 
+      .logos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (max-width: 1200px) {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        @media screen and (min-width: 2000px) {
+          width: 50%;
+          margin-left: 25%;
+          gap: 40px;
+        }
+      }
+
+      .citadel {
+        @media screen and (max-width: 1200px) {
+          width: 85vw;
+        }
+      }
+
       @keyframes flyfromleft {
         0% {
           opacity: 0;
@@ -426,43 +450,48 @@
           >
             Partners (Diamond)
           </h1>
-          <img
-            id="partnerlogo"
-            src="huawei-logo.png"
-            width="150"
-            alt="Huawei"
-          />
-          <img
-            id="partnerlogo"
-            src="TezosLogo_Stacked_Blue.png"
-            width="120"
-            alt="Tezos"
-          />
-          <img
-            id="partnerlogo"
-            src="Logo_forWhitebackground.png"
-            width="280"
-            alt="Tezos"
-          />
-          <img
-            id="partnerlogo"
-            src="Optiver-Black_RGB.png"
-            width="400"
-            alt="Optiver"
-          />
-          <img
-            id="partnerlogo"
-            src="micron-logo.png"
-            width="240"
-            alt="Micron"
-          />
-          <img id="partnerlogo" src="jump.svg" width="150" alt="Jump" />
-          <img
-            id="partnerlogo"
-            src="citadel_and_citadel_sec_logo_294C.jpg"
-            width="700"
-            alt="Citadel"
-          />
+          <div class="logos">
+            <img
+              id="partnerlogo"
+              src="huawei-logo.png"
+              width="150"
+              alt="Huawei"
+            />
+            <img
+              id="partnerlogo"
+              src="TezosLogo_Stacked_Blue.png"
+              width="120"
+              alt="Tezos"
+            />
+            <img
+              id="partnerlogo"
+              src="tezos_apac.png"
+              width="280"
+              alt="Tezos APAC"
+            />
+            <img id="partnerlogo" src="optiver.png" width="250" alt="Optiver" />
+            <img
+              id="partnerlogo"
+              src="hrt.png"
+              width="160"
+              alt="Hudson River Trading"
+            />
+            <img
+              id="partnerlogo"
+              src="micron-logo.png"
+              width="240"
+              alt="Micron"
+            />
+            <img id="partnerlogo" src="jump.svg" width="150" alt="Jump" />
+            <img id="partnerlogo" src="citadel.png" width="300" alt="Citadel" />
+            <img
+              id="partnerlogo"
+              src="citsec.png"
+              width="600"
+              alt="Citadel Securities"
+              class="citadel"
+            />
+          </div>
           <br />
           <h1
             style="
@@ -474,12 +503,14 @@
           >
             Partner (Silver)
           </h1>
-          <img
-            id="partnerlogo"
-            src="DRW_logo_RGB_DarkBlue_LightBlue.png"
-            width="100"
-            alt="DRW"
-          />
+          <div class="logos">
+            <img
+              id="partnerlogo"
+              src="DRW_logo_RGB_DarkBlue_LightBlue.png"
+              width="150"
+              alt="DRW"
+            />
+          </div>
           <br />
           <h1
             style="
@@ -494,64 +525,62 @@
           <img
             id="partnerlogo"
             src="SIMCC-Logo-Main-Website.png"
-            width="50"
+            width="100"
             alt="SIMCC"
           />
         </div>
       </div>
 
-    <div class="hi" style="margin-top: 20px">
-      <div class="row">
-        <div class="columnhi">
-          <h3 style="margin-bottom: 5px; font-weight: lighter">
-            <a href="/" id="lkmain">CeNCE</a>
-          </h3>
-          <a href="/#news" id="lksub">News</a>
-          <h3 style="margin-bottom: 5px; font-weight: lighter">
-            <a href="about.html" id="lkmain">About</a>
-          </h3>
-          <a href="mission.html" id="lksub">Mission</a><br />
-          <a href="people.html" id="lksub">People</a><br />
-          <a href="partners.html" id="lksub">Partners</a><br />
-          <a href="contact.html" id="lksub">Contact</a>
-        </div>
-        <div class="columnhi">
-          <h3 style="margin-bottom: 5px; font-weight: lighter">
-            <a href="programmes.html" id="lkmain">Programmes</a>
-          </h3>
-          <a href="programmes.html#mod1" id="lksub"
-            >Introduction to Computational Thinking and Problem Solving</a
-          ><br />
-          <a href="programmes.html#mod2" id="lksub"
-            >Introductory Programming with Python</a
-          ><br />
-          <a href="programmes.html#mod3" id="lksub">Programming with C/C++</a
-          ><br />
-          <a href="programmes.html#mod4" id="lksub"
-            >Introduction to Data Structures and Algorithms</a
-          ><br />
-          <a href="programmes.html#mod5" id="lksub"
-            >Introduction to Competitive Programming</a
-          ><br />
-          <h3 style="margin-bottom: 5px; font-weight: lighter">
-            <a href="contests.html" id="lkmain">Contests</a>
-          </h3>
-        </div>
-        <div class="columnhi">
-          <h3 style="margin-bottom: 5px; font-weight: lighter">
-            NUS School of Computing
-          </h3>
-          <span style="color: #aaabb8"
-            >School of Computing<br />
-            National University of Singapore<br />
-            Computing 1<br />
-            13 Computing Drive<br />
-            Singapore 117417<br />
-            Republic of Singapore</span
-          >
+      <div class="hi" style="margin-top: 20px">
+        <div class="row">
+          <div class="columnhi">
+            <h3 style="margin-bottom: 5px; font-weight: lighter">
+              <a href="/" id="lkmain">CeNCE</a>
+            </h3>
+            <a href="/#news" id="lksub">News</a>
+            <h3 style="margin-bottom: 5px; font-weight: lighter">About</h3>
+            <a href="mission.html" id="lksub">Mission</a><br />
+            <a href="people.html" id="lksub">People</a><br />
+            <a href="partners.html" id="lksub">Partners</a><br />
+            <a href="contact.html" id="lksub">Contact</a>
+          </div>
+          <div class="columnhi">
+            <h3 style="margin-bottom: 5px; font-weight: lighter">
+              <a href="programmes.html" id="lkmain">Programmes</a>
+            </h3>
+            <a href="programmes.html#mod1" id="lksub"
+              >Introduction to Computational Thinking and Problem Solving</a
+            ><br />
+            <a href="programmes.html#mod2" id="lksub"
+              >Introductory Programming with Python</a
+            ><br />
+            <a href="programmes.html#mod3" id="lksub">Programming with C/C++</a
+            ><br />
+            <a href="programmes.html#mod4" id="lksub"
+              >Introduction to Data Structures and Algorithms</a
+            ><br />
+            <a href="programmes.html#mod5" id="lksub"
+              >Introduction to Competitive Programming</a
+            ><br />
+            <h3 style="margin-bottom: 5px; font-weight: lighter">
+              <a href="contests.html" id="lkmain">Contests</a>
+            </h3>
+          </div>
+          <div class="columnhi">
+            <h3 style="margin-bottom: 5px; font-weight: lighter">
+              NUS School of Computing
+            </h3>
+            <span style="color: #aaabb8"
+              >School of Computing<br />
+              National University of Singapore<br />
+              Computing 1<br />
+              13 Computing Drive<br />
+              Singapore 117417<br />
+              Republic of Singapore</span
+            >
+          </div>
         </div>
       </div>
-      
     </div>
 
     <script>
