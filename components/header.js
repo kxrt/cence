@@ -13,7 +13,7 @@ class Header extends HTMLElement {
       src="https://kit.fontawesome.com/60e20db5cd.js"
       crossorigin="anonymous"
     ></script>
-    <header>\
+    <header>
         <!-- Responsive Topnav -->
         <div class="topnav" id="myTopnav">
             <a href="/" class="active"> <i class="fa-solid fa-code"></i> CeNCE</a>
