@@ -5,6 +5,11 @@ html {
   font-family: "Raleway", sans-serif;
 }
 
+a.disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 .image {
   display: block;
   width: 100%;
