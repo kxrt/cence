@@ -31,18 +31,6 @@
         font-family: "Raleway", sans-serif;
       }
 
-      .bgimg1 {
-        /* background: rgb(255,255,255);
-      background: linear-gradient(5deg, rgba(255,255,255,1) 30%, rgba(46,156,202,1) 64%); */
-        /* background-image: url(wave.png);
-      background-repeat: no-repeat;
-      background-position: center bottom; */
-        /* height: 100%; */
-        /* background-position: center; */
-        /* background-size: cover; */
-        /* position: relative; */
-      }
-
       .topnav {
         position: fixed;
         overflow: hidden; /*hide topnav on small screens*/
@@ -146,9 +134,6 @@
           display: block;
           text-align: left;
         }
-      }
-
-      .row {
       }
 
       .container::after,
@@ -402,154 +387,7 @@
         For signups and further details, please contact
         <a href="mailto:ionghn@nus.edu.sg">Ms. Irene Ong Hwei Wee</a>.
       </h4>
-
-      <!-- <button
-        class="accordion"
-        style="font-family: Playfair Display, Times, serif; font-size: 20px"
-      >
-        Introduction to Computational Thinking and Problem Solving
-      </button>
-      <div class="panel" id="mod1">
-        <ul>
-          <li>
-            Introduces computational thinking (CT) as problem-solving
-            <ul>
-              <li>Focuses on Polya’s Problem-solving Process (PPSP)</li>
-              <li>Emphasis on problem formulation and basic representations</li>
-              <li>
-                Leverages CT ideas – e.g., solutions via search/optimisation
-                (AI)
-              </li>
-              <li>Emphasis on problem-solving as separate to implementation</li>
-              <li>
-                Entirely syntax agnostic - code examples in multiple languages
-              </li>
-            </ul>
-          </li>
-          <li>Theory-based, examination-style competition</li>
-        </ul>
-      </div>
-
-      <button
-        class="accordion"
-        style="font-family: Playfair Display, Times, serif; font-size: 20px"
-      >
-        Introductory Programming with Python
-      </button>
-      <div class="panel" id="mod2">
-        <ul>
-          <li>
-            Consolidates problem-solving by focusing on implementation
-            <ul>
-              <li>Introduces Python syntax</li>
-              <li>Translating problem solutions to code</li>
-              <li>Begin to focus on complexity and practical efficiencies</li>
-              <li>Mastery of software development tools and skills</li>
-            </ul>
-          </li>
-          <li>Practical-based examination-style competition</li>
-        </ul>
-      </div>
-
-      <button
-        class="accordion"
-        style="font-family: Playfair Display, Times, serif; font-size: 20px"
-      >
-        Programming with C/C++
-      </button>
-      <div class="panel" id="mod3">
-        <ul>
-          <li>
-            Extending student knowledge to include explicit memory management
-            <ul>
-              <li>Introduces C/C++ syntax</li>
-              <li>Emphasis on memory management</li>
-              <li>
-                Even greater focus on complexity and practical efficiencies
-              </li>
-            </ul>
-          </li>
-          <li>Practical-based examination-style competition</li>
-        </ul>
-      </div>
-
-      <button
-        class="accordion"
-        style="font-family: Playfair Display, Times, serif; font-size: 20px"
-      >
-        Introduction to Data Structures and Algorithms
-      </button>
-      <div class="panel" id="mod4">
-        <ul>
-          <li>
-            Adding building blocks for problem solving
-            <ul>
-              <li>Introduces fundamental Data Structures and Algorithms</li>
-              <li>
-                Time and space complexities are now an integral part of problem
-                solving
-              </li>
-              <li>Using the latest C++ standard and libraries</li>
-            </ul>
-          </li>
-          <li>Practical-based examination-style competition</li>
-        </ul>
-      </div>
-
-      <button
-        class="accordion"
-        style="font-family: Playfair Display, Times, serif; font-size: 20px"
-      >
-        Introduction to Competitive Programming
-      </button>
-      <div class="panel" id="mod5">
-        <ul>
-          <li>
-            Preparing students for actual informatics competitions
-            <ul>
-              <li>
-                Introduces more advanced algorithmic problem-solving techniques
-              </li>
-              <li>
-                Introduces competitive problem solving under time pressure
-              </li>
-              <li>Gaining experience via weekly mini competitions</li>
-            </ul>
-          </li>
-          <li>
-            Content from (the first half of)
-            <a href="https://www.comp.nus.edu.sg/~stevenha/cs3233.html" id="lk"
-              >CS3233</a
-            >
-            <ul>
-              <li>
-                To be conducted from January to early March each year before NOI
-              </li>
-            </ul>
-          </li>
-          <li>Competitive programming competition</li>
-        </ul>
-      </div>
-
-      <p>More details about the programmes will be updated in the future.</p> -->
     </div>
     <footer-component></footer-component>
-
-    <script>
-      var acc = document.getElementsByClassName("accordion");
-      var i;
-
-      for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function () {
-          this.classList.toggle("active");
-          var panel = this.nextElementSibling;
-          if (panel.style.display === "block") {
-            panel.style.display = "none";
-          } else {
-            panel.style.display = "block";
-          }
-        });
-      }
-    </script>
   </body>
 </html>
