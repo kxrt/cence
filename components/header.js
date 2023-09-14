@@ -30,19 +30,8 @@ class Header extends HTMLElement {
                 <span><a href="contact.html">Contact</a></span>
                 </div>
             </div>
-            <div class="dropdown">
-                <button class="dropbtn" type="button" onclick="window.location.pathname='/programmes.html'">
-                <i class="fa-solid fa-chalkboard-user"></i> Programmes
-                <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content">
-                <a href="ctps.html">CTPS</a>
-                <a href="cs1.html">CS1</a>
-                <span><a href="cs2.html">CS2</a></span>
-                <span><a href="december_noi.html">December NOI Training</a></span>
-                <span><a href="ggi.html">CS for Graduating Girls Initiative @ CeNCE</a></span>
-                </div>
-            </div>
+            <a href="programmes.html"><i class="fa-solid fa-chalkboard-user"></i> Courses</a>
+            <a href="events.html"><i class="fa-solid fa-calendar"></i> Events</a>
             <a href="contests.html"><i class="fa-solid fa-trophy"></i> Contests</a>
             <a href="javascript:void(0)" class="icon" onclick="ResponsiveDropdown()">
                 <i class="fa-solid fa-bars"></i>

@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About - CeNCE</title>
+    <link rel="shortcut icon" href="images/cence_logo.png" />
+    <!-- Load fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&amp;family=Cormorant+SC:wght@700&amp;family=Fredericka+the+Great&amp;family=Italianno&amp;family=Mochiy+Pop+One&amp;family=Playfair+Display&amp;family=Poppins&amp;family=Raleway:wght@600&amp;family=Yatra+One&amp;family=ZCOOL+XiaoWei&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Font Awesome (an icon library) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <script
+      src="https://kit.fontawesome.com/60e20db5cd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        line-height: 1;
+        font-family: "Raleway", sans-serif;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+
+      .topnav {
+        position: fixed;
+        width: 100%;
+        overflow: hidden; /*hide topnav on small screens*/
+        background-color: #303c6c;
+        z-index: 100;
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 1em 2em;
+        text-decoration: none;
+        font-size: 15px;
+        transition: 0.3s;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        color: #ef7c00;
+
+        font-size: 16px;
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: #ef7c00;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: fixed;
+        background-color: #25274d;
+        min-width: 160px;
+        color: white;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 100000;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+        color: #25274d;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .topnav a.active {
+        /* background-color: #003D7C; */
+        color: #ef7c00;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+
+      .column {
+        float: left;
+        width: 25%;
+        margin-bottom: 16px;
+        margin-left: 6.25%;
+        padding: 0 8px;
+        line-height: 1;
+      }
+
+      .column1 {
+        float: left;
+        width: 25%;
+        margin-bottom: 16px;
+        margin-left: 37.5%;
+        padding: 0 8px;
+        line-height: 1;
+      }
+
+      .column3 {
+        float: left;
+        width: 25%;
+        margin-bottom: 16px;
+        margin-left: 16.7%;
+        padding: 0 8px;
+        line-height: 1;
+      }
+      #partnerlogo {
+        margin: 20px 50px;
+      }
+
+      @media screen and (max-width: 700px) {
+        .topnav a:not(:first-child) {
+          display: none;
+        }
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+        .column {
+          width: 100%;
+          display: block;
+          margin-left: 0;
+        }
+        .column1 {
+          width: 100%;
+          display: block;
+          margin-left: 0;
+        }
+        .column3 {
+          width: 100%;
+          display: block;
+          margin-left: 0;
+        }
+        #partnerlogo {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .topnav.responsive {
+          position: fixed;
+        }
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+
+      .content {
+        position: relative;
+        line-height: 1.5;
+        color: #25274d;
+        font-family: Roboto, Arial, sans-serif;
+      }
+
+      .descriptionleft {
+        position: relative;
+        max-width: 900px;
+        padding: 20px 25px;
+        /* padding-left: 10em; */
+        font-size: 20px;
+        text-align: left;
+        float: left;
+      }
+      .descriptionmiddle {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 10px 15px;
+        font-size: 20px;
+        text-align: center;
+      }
+      .description {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 10px 15px;
+        font-size: 20px;
+        text-align: justify;
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .descriptionright {
+        position: relative;
+        max-width: 700px;
+        padding: 5px 25px;
+        /* padding-left: 10em; */
+        font-size: 20px;
+        float: right;
+        text-align: right;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .container::after,
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .title {
+        color: grey;
+        text-align: center;
+      }
+
+      .columnhi {
+        float: left;
+        width: auto;
+        margin-bottom: 16px;
+        padding-right: 40px;
+      }
+      .hi {
+        font-size: 14px;
+        position: relative;
+        text-align: center;
+        background-image: url(images/hi.jpg);
+        background-color: #25274d;
+        background-blend-mode: darken;
+        padding: 10px 60px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        text-align: left;
+      }
+      .credit {
+        font-size: 12px;
+        /* font-weight: 10; */
+        font-family: "Yatra One", cursive;
+        padding-bottom: 5px;
+        text-align: center;
+      }
+
+      .accordion {
+        background-color: #25274d;
+        background-image: url(images/2.jpg);
+        background-size: cover;
+        background-blend-mode: darken;
+        cursor: pointer;
+        padding: 10px;
+        width: auto;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        transition: 0.4s;
+        color: white;
+      }
+
+      .accordion:hover {
+        background-color: #ccc;
+        color: #25274d;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      }
+      .container {
+        margin: 0 0;
+      }
+      #gradientfont {
+        background: -webkit-linear-gradient(#2e9cca, #29648a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+      }
+      #lk {
+        color: #25274d;
+        text-decoration: none;
+        padding-left: 5pt;
+        padding-right: 5pt;
+        background: #ef7c00;
+        transform: rotate(2deg);
+        border-radius: 20% 25% 20% 24%;
+      }
+
+      #lkmain {
+        color: white;
+        text-decoration: none;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      #lkmain:hover {
+        text-decoration: overline;
+      }
+
+      #lksub {
+        color: #aaabb8;
+        text-decoration: none;
+      }
+      #lksub:hover {
+        color: white;
+      }
+      .parallax {
+        /* The image used */
+        background-image: url("images/soc.jpg");
+
+        /* Set a specific height */
+        min-height: 50px;
+
+        /* Create the parallax scrolling effect */
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: flyfromleft;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes flyfromleft {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header-component></header-component>
+    <div class="content">
+      <div class="parallax"></div>
+
+      <div class="container">
+        <div id="mission">
+          <br />
+        </div>
+        <div class="description">
+          <h1>
+            <span
+              style="
+                font-family: Playfair Display, Times, serif;
+                text-decoration: overline;
+                font-size: 45px;
+              "
+              >ICPC 2023</span
+            >
+          </h1>
+          <h2>
+            NUS computing students achieved outstanding results at ICPC
+            Challenge Championship and ICPC Training Camp powered by Huawei
+          </h2>
+          <p>
+            <b>31 August 2023</b> — Huawei successfully concluded the ICPC
+            Challenge Championship and ICPC Training Camp powered by Huawei last
+            week in Dongguan, China. Among the contestants were 6 students from
+            NUS, who were accompanied by their coach - Dr Tan Sun Teck.
+          </p>
+          <img src="images/icpc2023.jpg" width="850px" />
+          <p style="font-size: 14px">
+            NUS team (from left to right): A/P Tan Sun Teck, Teow Hua Jun, Zhang
+            Jikun, Lim An Jun, Nyamdavaa Amar, Jeffrey Lee Chun Hean and Vu
+            Hoang Kien
+          </p>
+          <p>
+            The event kicked off with an opening ceremony, followed by a prize
+            ceremony where 3 students - Teow Hua Jun, Zhang Ji Kun, and Lim An
+            Jun were each awarded the second prize for the 2023 ICPC Spring
+            Online Challenge powered by Huawei that they participated in
+            previously.
+          </p>
+          <img src="images/icpc2023_2.jpg" width="850px" />
+          <p style="font-size: 14px">
+            Group photo taken during the grand opening ceremony of ICPC
+            Challenge Championship powered by Huawei
+          </p>
+          <p>
+            The International Collegiate Programming Contest (ICPC) is an
+            algorithmic programming contest for college students. This time,
+            Huawei partnered with ICPC Foundation to host the very first ICPC
+            Challenge Championship powered by Huawei, with 58 contestants from
+            25 countries participating in a five-hour individual challenge.
+            Despite facing strong competition, NUS second-year Computer Science
+            student - Lim An Jun won the second prize, ranking number six in the
+            final standings.
+          </p>
+          <img src="images/icpc2023_3.jpg" width="850px" />
+          <p style="font-size: 14px">
+            Lim An Jun (second from left) posing with other second prize winners
+            during the prize ceremony.
+          </p>
+          <p>
+            Additionally, NUS ICPC team - The Spiders from Mars was also invited
+            to the ICPC Training Camp powered by Huawei under a new team name
+            “Kids See Ghosts”, which comprises three members: Computer Science
+            students Vu Hoang Kien, Nyamdavaa Amar, and Jeffrey Lee Chun Hean.
+          </p>
+          <p>
+            The Training Camp aims to provide an extended platform to support
+            high-level programming training and innovation for college students
+            who are passionate about programming and algorithms. On the second
+            day of the training camp, Kids See Ghosts team finished the five
+            hours team competition in seventh place among a total of 36 teams,
+            successfully solving 8 out of 12 problems.
+          </p>
+          <img src="images/icpc2023_4.jpg" width="850px" />
+          <p style="font-size: 14px">
+            From left to right, the Kids See Ghosts team members: Nyamdavaa
+            Amar, Jeffrey Lee Chun Hean and Vu Hoang Kien
+          </p>
+          <p>
+            The NUS students certainly accomplished another milestone in the
+            ICPC Challenge Championship and ICPC Training Camp powered by
+            Huawei. Congratulations NUS team!
+          </p>
+          <p>
+            For more information regarding ICPC Challenge Championship powered
+            by Huawei, please visit:
+            <a
+              href="https://www.huawei.com/en/news/2023/8/icpc-talent-championship"
+            >
+              https://www.huawei.com/en/news/2023/8/icpc-talent-championship
+            </a>
+          </p>
+          <p>
+            For more information regarding ICPC Training Camp powered by Huawei,
+            please visit:
+            <a href="https://www.huawei.com/minisite/icpc2023/en/">
+              https://www.huawei.com/minisite/icpc2023/en/
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <footer-component></footer-component>
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
