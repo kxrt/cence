@@ -1,0 +1,801 @@
+<!DOCTYPE html>
+<html>
+  <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ICPC Meeting Minutes - CeNCE</title>
+    <link rel="shortcut icon" href="images/cence_logo.png" />
+    <!-- Load fonts from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@500&amp;family=Cormorant+SC:wght@700&amp;family=Fredericka+the+Great&amp;family=Italianno&amp;family=Mochiy+Pop+One&amp;family=Playfair+Display&amp;family=Poppins&amp;family=Raleway:wght@600&amp;family=Yatra+One&amp;family=ZCOOL+XiaoWei&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Load Font Awesome (an icon library) -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"> -->
+    <script
+      src="https://kit.fontawesome.com/60e20db5cd.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="components/header.js" type="text/javascript" defer></script>
+    <script src="components/footer.js" type="text/javascript" defer></script>
+    <style>
+      body,
+      html {
+        height: 100%;
+        margin: 0;
+        line-height: 1;
+        font-family: "Raleway", sans-serif;
+      }
+
+      html {
+        box-sizing: border-box;
+      }
+
+      .topnav {
+        position: fixed;
+        width: 100%;
+        overflow: hidden; /*hide topnav on small screens*/
+        background-color: #303c6c;
+        z-index: 100;
+      }
+
+      .topnav a {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 1em 2em;
+        text-decoration: none;
+        font-size: 15px;
+        transition: 0.3s;
+      }
+
+      .dropdown {
+        float: left;
+        overflow: hidden;
+      }
+
+      .dropdown .dropbtn {
+        color: #ef7c00;
+
+        font-size: 16px;
+        border: none;
+        outline: none;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+      }
+
+      .navbar a:hover,
+      .dropdown:hover .dropbtn {
+        background-color: #ef7c00;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .dropdown-content {
+        display: none;
+        position: fixed;
+        background-color: #25274d;
+        min-width: 160px;
+        color: white;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 100000;
+      }
+
+      .dropdown-content a {
+        float: none;
+        color: white;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
+
+      .dropdown-content a:hover {
+        background-color: #ddd;
+        color: #25274d;
+      }
+
+      .dropdown:hover .dropdown-content {
+        display: block;
+      }
+
+      .topnav a.active {
+        /* background-color: #003D7C; */
+        color: #ef7c00;
+      }
+
+      .topnav .icon {
+        display: none;
+      }
+
+      .column {
+        float: left;
+        width: 25%;
+        margin-bottom: 16px;
+        margin-left: 6.25%;
+        padding: 0 8px;
+        line-height: 1;
+      }
+
+      .column1 {
+        float: left;
+        width: 25%;
+        margin-bottom: 16px;
+        margin-left: 37.5%;
+        padding: 0 8px;
+        line-height: 1;
+      }
+
+      .column3 {
+        float: left;
+        width: 25%;
+        margin-bottom: 16px;
+        margin-left: 16.7%;
+        padding: 0 8px;
+        line-height: 1;
+      }
+      #partnerlogo {
+        margin: 20px 50px;
+      }
+
+      @media screen and (max-width: 700px) {
+        .topnav a:not(:first-child) {
+          display: none;
+        }
+        .topnav a.icon {
+          float: right;
+          display: block;
+        }
+        .column {
+          width: 100%;
+          display: block;
+          margin-left: 0;
+        }
+        .column1 {
+          width: 100%;
+          display: block;
+          margin-left: 0;
+        }
+        .column3 {
+          width: 100%;
+          display: block;
+          margin-left: 0;
+        }
+        #partnerlogo {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      }
+
+      @media screen and (max-width: 700px) {
+        .topnav.responsive {
+          position: fixed;
+        }
+        .topnav.responsive .icon {
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+        .topnav.responsive a {
+          float: none;
+          display: block;
+          text-align: left;
+        }
+      }
+
+      .content {
+        position: relative;
+        line-height: 1.5;
+        color: #25274d;
+        font-family: Roboto, Arial, sans-serif;
+      }
+
+      .descriptionleft {
+        position: relative;
+        max-width: 900px;
+        padding: 20px 25px;
+        /* padding-left: 10em; */
+        font-size: 20px;
+        text-align: left;
+        float: left;
+      }
+      .descriptionmiddle {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 10px 15px;
+        font-size: 20px;
+        text-align: center;
+      }
+      .description {
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
+        padding: 10px 15px;
+        font-size: 20px;
+        text-align: left;
+        max-width: 900px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .descriptionright {
+        position: relative;
+        max-width: 700px;
+        padding: 5px 25px;
+        /* padding-left: 10em; */
+        font-size: 20px;
+        float: right;
+        text-align: right;
+      }
+      *,
+      *:before,
+      *:after {
+        box-sizing: inherit;
+      }
+      .card {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .container::after,
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+
+      .title {
+        color: grey;
+        text-align: center;
+      }
+
+      .columnhi {
+        float: left;
+        width: auto;
+        margin-bottom: 16px;
+        padding-right: 40px;
+      }
+      .hi {
+        font-size: 14px;
+        position: relative;
+        text-align: center;
+        background-image: url(images/hi.jpg);
+        background-color: #25274d;
+        background-blend-mode: darken;
+        padding: 10px 60px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 1.5;
+        text-align: left;
+      }
+      .credit {
+        font-size: 12px;
+        /* font-weight: 10; */
+        font-family: "Yatra One", cursive;
+        padding-bottom: 5px;
+        text-align: center;
+      }
+
+      .accordion {
+        background-color: #25274d;
+        background-image: url(images/2.jpg);
+        background-size: cover;
+        background-blend-mode: darken;
+        cursor: pointer;
+        padding: 10px;
+        width: auto;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+        transition: 0.4s;
+        color: white;
+      }
+
+      .accordion:hover {
+        background-color: #ccc;
+        color: #25274d;
+      }
+
+      .panel {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
+      }
+      .container {
+        margin: 0 0;
+      }
+      #gradientfont {
+        background: -webkit-linear-gradient(#2e9cca, #29648a);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-weight: 700;
+      }
+      #lk {
+        color: #25274d;
+        text-decoration: none;
+        padding-left: 5pt;
+        padding-right: 5pt;
+        background: #ef7c00;
+        transform: rotate(2deg);
+        border-radius: 20% 25% 20% 24%;
+      }
+
+      #lkmain {
+        color: white;
+        text-decoration: none;
+        margin-top: 0;
+        margin-bottom: 10px;
+      }
+      #lkmain:hover {
+        text-decoration: overline;
+      }
+
+      #lksub {
+        color: #aaabb8;
+        text-decoration: none;
+      }
+      #lksub:hover {
+        color: white;
+      }
+      .parallax {
+        /* The image used */
+        background-image: url("images/soc.jpg");
+
+        /* Set a specific height */
+        min-height: 50px;
+
+        /* Create the parallax scrolling effect */
+        background-repeat: no-repeat;
+        background-size: cover;
+        animation: flyfromleft;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes flyfromleft {
+        0% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header-component></header-component>
+    <div class="content">
+      <div class="parallax"></div>
+
+      <div class="container">
+        <div id="mission">
+          <br />
+        </div>
+        <div class="description">
+          <h1>
+            <span
+              style="
+                font-family: Playfair Display, Times, serif;
+                text-decoration: overline;
+                font-size: 45px;
+              "
+              >ICPC 2023</span
+            >
+          </h1>
+          <h2 style="margin: 0; margin-bottom: 1rem">
+            Today, we gather here together; tomorrow, we will go to the four
+            corners of the world
+          </h2>
+          <h3 style="margin: 0; font-weight: normal">
+            —Minutes of Mr. Ren Zhengfei's Meetings with ICPC Foundation
+            President, Coaches, and Champions
+          </h3>
+          <h4 style="margin: 1; font-weight: normal; font-size: medium">
+            August 21 and 26, 2023
+          </h4>
+          <p>
+            Thank you to the ICPC community for coming from around the world to
+            tour Huawei and participate in the ICPC Challenge Championship
+            powered by Huawei. We will continue to support your global events,
+            and also all kinds of contests for university students in subjects
+            like math, physics, and biology.
+          </p>
+          <img src="images/minutes1.jpg" width="850px" />
+          <p style="font-weight: 600">
+            I. We are set to embark on the journey of the Fourth Industrial
+            Revolution, during which a huge abundance of computing power will
+            serve as the foundation. Young people today may become the leaders
+            of the Fourth Industrial Revolution tomorrow. The reason we support
+            contests is to build a stage for young people to shine.
+          </p>
+          <p>
+            Teamwork is not only the basis for winning contests, but also the
+            basis for survival. More importantly, teamwork is necessary to drive
+            greater prosperity for humanity. It is essential that we work
+            closely together. When we come together, we will inspire and compete
+            with each other. This will lead to the explosive development of new
+            scientific technologies. Elites from 25 countries are happily
+            gathered here today. After getting to know each other, we will
+            exchange ideas on a common platform. Coaches, students, teams can
+            inspire each other. This may leave behind great memories and ignite
+            sparks. When these young people return home, they can light big
+            fires of innovation to their own communities. New scientific
+            technologies are sure to help create more wealth, eliminate poverty,
+            and improve people's lives, enabling humanity to embark on a road
+            towards affluence.
+          </p>
+          <p>
+            The Fourth Industrial Revolution is massive and its scale is far
+            beyond our imagination. Young people today will become the leaders
+            of the era of massive computing power. All of society places great
+            hope upon you. You will surely shine like stars during the AI
+            revolution over the next two to three decades.
+          </p>
+          <p style="font-weight: 600">
+            II. Huawei has always followed the principle of identifying and
+            developing talent, but never seeking monopoly in this regard. We
+            will continue opening our arms to embrace global talent.
+          </p>
+          <p>
+            Global development is inseparable from technological progress and
+            talent exchange. Faster development and better talent will be the
+            basis for countries to prosper. Huawei is willing to work with
+            academia to cultivate outstanding talent in the information domain.
+            However, we will never seek monopoly in this regard. After studying
+            and growing at Huawei, such talent will return to their own
+            countries. This will be conducive to the rejuvenation of the
+            information sectors of these countries.
+          </p>
+          <p style="font-weight: 600">
+            III. We will support contests over the long term, and will sponsor
+            the organizers of both global and regional contests. And we will not
+            only continue supporting contests but also increase our sponsorship
+            for such events.
+          </p>
+          <p>
+            We will support the ICPC Foundation hosting world finals in Asia
+            East, and will more regularly invite outstanding contestants and
+            coaches to visit China, for example, Beijing, Shenzhen, Hangzhou,
+            Shanghai, Guizhou, and border provinces like Xinjiang and Tibet.
+            China has many very beautiful counties that are worth visiting. In
+            these places, the contestants and coaches can see China's industry
+            development and urban construction firsthand. They can take
+            high-speed trains to experience the speed of development in China.
+            They can also have coffee, try barbecue or Chinese cuisine, and
+            experience the country's cultural climate.
+          </p>
+          <p>
+            Aside from supporting or co-organizing global software contests, we
+            are supporting contests in other subjects, like informatics, math,
+            physics, chemistry, biology, and neural networks. We will also
+            support young people majoring in such subjects, inspire them to
+            become interests in scientific research, and thus help cultivate
+            talent in basic science.
+          </p>
+          <p style="font-weight: 600">
+            IV. We will open up our campuses worldwide and support ICPC contests
+            on our campuses. We will also provide access to our facilities where
+            students can experience what it is like to work at Huawei.
+          </p>
+          <p>
+            Huawei provides the world's bright young minds with both IT
+            technical challenges and internship and research opportunities. We
+            offer these individuals access to Huawei's device-edge-network-cloud
+            platform, and the chance to explore the fundamentals and frontiers
+            that are key to addressing top challenges. By organizing contests
+            and inspiring open discussions on our Chaspark website, we create
+            multiple channels through which young people can understand
+            real-world challenges in industry. If they win prize money from our
+            contests, they can spend more time studying, rather than working
+            part-time to earn their tuition fees. This is a good way for young
+            people to grow faster.
+          </p>
+          <img src="images/minutes2.jpg" width="850px" />
+          <h4>Q&A Session</h4>
+          <p>
+            <b
+              >Representative of Singapore's National Olympiad Committee, former
+              ICPC team coach:</b
+            >
+            <i>
+              First, I would like to thank Huawei for its generous support in
+              helping train our students and organize contests. I'd like to
+              discuss two contest organizations. The first is the IOI, which is
+              a pipeline to the ICPC. The IOI mainly focuses on discovering and
+              training talent. But the IOI is currently facing some problems.
+              There are over 90 countries involved in the IOI, but many aren't,
+              such as Cambodia, Laos, Brunei, and Myanmar. Therefore, all these
+              countries need our support. I think this aligns with Huawei's
+              vision - spreading information technologies to every corner of the
+              world. Even those who are currently part of the IOI are facing
+              problems. They don't have the resources necessary to train
+              students. So even though they take part in the IOI, there is very
+              little possibility of them winning a medal. Therefore, they won't
+              be able to participate in the ICPC. So I really hope that Huawei
+              can actually give us some support. Second, I want to talk about
+              the EGOI, which stands for the European Girls' Olympiad in
+              Informatics. I think this is a great trend. Among our 58
+              participants, there is only one girl, which is less than 2%. I
+              hope that Huawei can help address gender imbalance within such
+              contests.</i
+            >
+          </p>
+          <p>
+            <b>Mr. Ren:</b> When Singapore was founded, Lee Kuan Yew enacted two
+            important national policies. The first was to choose English as one
+            of Singapore's national languages, which has helped connect the
+            country to a wider world. The second was to make Chinese, or
+            Mandarin, another official language. These policies help the country
+            connect to two major parts of the wider world. Today, our computer
+            contest aims to unify both the language of computers and the
+            standards in the era of massive computing power. We aim to remove
+            the obstacles and misunderstandings between us through exchanges
+            over cups of coffee.
+          </p>
+          <p>
+            This time, we've connected the 25 participating countries. A spark
+            can shine brightly, and even lead to big fires of innovation for a
+            country. The coaches and young people here are welcome to China at
+            any time. You already have the contact information of many of our
+            colleagues, so you can stay in touch with them. The young people
+            present here are our long-term partners. In addition to the ICPC, we
+            will support the IOI and contests in subjects like math, physics,
+            chemistry, biology, and neural networks. Together, we can help
+            cultivate talent in basic science.
+          </p>
+          <p>
+            <b>ICPC team coach from Northern Eurasia:</b>
+            <i
+              >I have been working as an ICPC champion team coach for ten years.
+              Many companies are supportive of talent development efforts, but
+              they rarely seem willing to support large contests like the ICPC,
+              as such contests may not be directly related to their own
+              business. Things changed a lot when Huawei opened local resource
+              centers and started supporting contests. In my opinion, Huawei's
+              goal is to recruit talent and, more importantly, help local
+              communities cultivate their own talent. We have received
+              considerable support from the contest management department, and
+              25 students from my champion teams have joined Huawei. Why are
+              contests so important to Huawei's business development? Why does
+              Huawei believe that contests are essential?</i
+            >
+          </p>
+          <p>
+            <b>Mr. Ren:</b> Huawei is a business organization, but we do not
+            seek only profits. We are committed to sponsoring contests, and we
+            do not do this to acquire talent. Going forward, we will ramp up our
+            support for contests. A moment ago, when I was having coffee with
+            ICPC leadership, and expressed my hope that more contests could be
+            organized, including those related to subjects like informatics,
+            math, physics, chemistry, biology, and neural networks. We will
+            support these contests no matter whether or not they are related to
+            Huawei's business. We have also discussed and agreed that scientific
+            technologies should be used to help create more wealth and eliminate
+            poverty, enabling humanity to embark on a road towards affluence.
+          </p>
+          <p>
+            <b>Director of ICPC Latin America Contests:</b>
+            <i
+              >I'm very proud because a contestant from Latin America won the
+              championship. Like him, there are many other outstanding students
+              from our region. But I found that it is rare to see employees from
+              Latin America at Huawei. My question is: Does Huawei welcome Latin
+              American talent to come for internships? For example, does China
+              offer any systematic support?</i
+            >
+          </p>
+          <p>
+            <b>Mr. Ren:</b> At Huawei, we welcome outstanding talent from all
+            countries, including those in Latin America. We have an online
+            platform called "Chaspark", where students can contact and
+            communicate with our experts. They may be offered internships at
+            Huawei if the experts think face-to-face communication is necessary.
+            Let's take a simple example. Who invented 5G, which the US has
+            devoted so much time and effort to restrict? Who invented Polar
+            Code? Professor Erdal Arikan, from Türkiye. He published a
+            mathematical paper more than a decade ago. We discovered this paper
+            two weeks after its release. Then we arranged for thousands of
+            scientists and experts to study and analyze this paper, and conduct
+            related engineering work. That's how we developed world-leading 5G.
+            There are always talented people we can work with. Of course, most
+            of them are likely to be found in the US. Nobody can know where
+            geniuses will emerge. You are welcome to communicate with our
+            experts on our online platform Chaspark.
+          </p>
+          <p>
+            <b
+              >Professor at Peking University and ICPC Asia East Continent
+              Co-Director:</b
+            >
+            <i
+              >A few years ago, Huawei began sponsoring contests. We are very
+              proud to see that support of global education events. What are
+              your expectations for higher education?</i
+            >
+          </p>
+          <p>
+            <b>Mr. Ren:</b> We will continue to sponsor these global contests. I
+            don't think that our current sponsorship is enough. We will double
+            down on our efforts in this area.
+          </p>
+          <p>
+            Higher education should be well-tailored. We should not always
+            stress the use of unified teaching materials. I don't agree with the
+            slogan "do not let children lose at the starting line" used for
+            elementary and secondary education. We should not make excellent
+            students wait for those who are left behind. Education in China must
+            be revitalized.
+          </p>
+          <p>
+            <b>A contestant from Europe:</b>
+            <i
+              >There is a kind of scientific research called useless research.
+              It is deemed useless in the short term because we do not know
+              where it can be applied, though it is very important in the long
+              term. This kind of research may be primarily conducted by
+              universities rather than companies. What is Huawei's view on this
+              so-called useless research? Will you fund this type of
+              research?</i
+            >
+          </p>
+          <p>
+            <b>Mr. Ren:</b> What is science? Science is all about the unknown.
+            In his book Science, The Endless Frontier, American scientist
+            Vannevar Bush suggested that the US should study things that are
+            seemingly useless and remote, that is, the so-called "useless"
+            science. In the 1990s, Princeton University Professor Donald Stokes
+            wrote a book Pasteur's Quadrant: Basic Science and Technological
+            Innovation, which talks about how to use applications to guide
+            scientific research and bring the so-called "useless" science
+            together and translate it into useful applications.
+          </p>
+          <p>
+            Nowadays, the boundaries between science and technology are
+            blurring, and the time it takes for science to translate into
+            technology is being reduced. If we only begin to develop technology
+            after universities have finished research on relevant theories, we
+            will lose our first-mover advantage and competitive edge. That's why
+            we value basic theoretical research. Every year, we invest about 3
+            to 5 billion US dollars in this area. We work hand in hand with
+            universities to explore seemingly useless science.
+          </p>
+          <p>
+            <b>A contestant from Asia West:</b>
+            <i
+              >Do ICPC contestants have the opportunity to join Huawei? If yes,
+              what career opportunities does Huawei offer?</i
+            >
+          </p>
+          <p>
+            <b>Mr. Ren:</b> These contests are purely academic activities and
+            are not directly related to opportunities to join Huawei. If you
+            want to join Huawei, you can submit a job application to Huawei's
+            human resource department in your country. Outstanding talent from
+            around the world are welcome to join us. Bangladesh's population is
+            set to reach 200 million in the near future, and the West sees the
+            country as one of the next emerging industrial nations. With
+            outstanding talent like you, I believe Bangladesh will embark on a
+            journey of accelerated development. But what is the foundation for
+            this kind of development? Speed. I hope you are among the first to
+            take what you have learned back to Bangladesh and help your country
+            develop at a higher speed.
+          </p>
+          <p>
+            <b>Director of ICPC Mexico & Central America Contests:</b>
+            <i
+              >A number of tech companies, such as Oracle and Cisco, have set up
+              R&D centers in Mexico. Does Huawei have any plans to set up an R&D
+              facility in Mexico or Latin America in the future?</i
+            >
+          </p>
+          <p>
+            <b>Mr. Ren:</b> I think the President of our 2012 Laboratories has
+            more information on the distribution of our R&D facilities outside
+            China. We'll forward your question to him. Mexico has a magnificent
+            history. Today, we still have a lot to learn about the ancient Maya
+            civilization. Civilization in Mexico dates back millennia, and its
+            influence can be found in many countries around the world. I think
+            we may consider establishing an R&D facility in Mexico, but that
+            also depends on the specific plans of our 2012 Laboratories. In the
+            past, we built our R&D centers around the world, with the US at the
+            center. After the US began imposing restrictions on Huawei, we
+            gradually shifted our focus to Europe and Asia, and reduced our
+            presence in Latin America. The US has a lot of influence in Latin
+            America, so we need to further assess the situation in the region.
+          </p>
+          <p>
+            <b>A contestant from Eurasia:</b>
+            <i
+              >Huawei has a large workforce. How do you manage employees to
+              ensure efficient operations?</i
+            >
+          </p>
+          <p>
+            <b>Mr. Ren:</b> I paid a visit to the US right after Huawei was
+            founded, in order to learn the US's corporate management systems.
+            The main model we looked at was that of IBM. First, we learned IBM's
+            goal management. The company placed customers at the center of
+            everything it did. With this approach, it set a common goal of
+            serving customers, which united its employees. Second, we learned
+            the Integrated Product Development Process, or IPD, from IBM. This
+            process is about getting market and service representatives involved
+            in R&D. With IPD, we have a forward-looking organization that
+            advances our R&D efforts. After that, we learned the Integrated
+            Financial Services (IFS) and Integrated Supply Chain (ISC) processes
+            from IBM. In this way, we built a clear process system. Another
+            important issue is value distribution. For this issue, we tried to
+            find where Huawei's wealth lies and how we should distribute it. We
+            believe that our company's wealth lies in the brains of our
+            employees, and we thus distribute value to employees based on the
+            "weight" of the knowledge held in their brains. In our distribution
+            system, the ratio of return on labor to return on capital is 3 to 1.
+          </p>
+          <p>
+            <b>A contestant from Europe:</b>
+            <i>I heard that you are a big fan of Apple. Is this true?</i>
+          </p>
+          <p>
+            <b>Mr. Ren:</b> When my daughter studied in the US, she used Apple
+            products. If she hadn't, she would have had a much harder time at
+            school. I think we should be open-minded. We often look at what
+            makes Apple products so good and try to understand the gaps between
+            us and Apple. It's a good thing that we have someone to look up to.
+            We can learn from them and compare our products with theirs. In this
+            sense, you could say that I'm a fan of Apple.
+          </p>
+          <img src="images/minutes3.jpg" width="850px" />
+          <p>
+            For more information regarding ICPC Challenge Championship powered
+            by Huawei, please visit:
+            <a
+              href="https://www.huawei.com/en/news/2023/8/icpc-talent-championship"
+            >
+              https://www.huawei.com/en/news/2023/8/icpc-talent-championship
+            </a>
+          </p>
+          <p>
+            For more information regarding ICPC Training Camp powered by Huawei,
+            please visit:
+            <a href="https://www.huawei.com/minisite/icpc2023/en/">
+              https://www.huawei.com/minisite/icpc2023/en/
+            </a>
+          </p>
+        </div>
+      </div>
+
+      <footer-component></footer-component>
+    </div>
+
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.display === "block") {
+            panel.style.display = "none";
+          } else {
+            panel.style.display = "block";
+          }
+        });
+      }
+    </script>
+  </body>
+</html>
