@@ -368,31 +368,7 @@
     </style>
   </head>
   <body>
-    <!-- Responsive Topnav -->
-    <div class="topnav" id="myTopnav">
-      <a href="/"><i class="fa-solid fa-code"></i> CeNCE</a>
-      <!-- <a href="about.html" class = "active"><i class="fa-regular fa-face-laugh-wink"></i>  About</a> -->
-      <div class="dropdown">
-        <button class="dropbtn" type="button">
-          <i class="fa-regular fa-face-laugh-wink"></i> About
-          <i class="fa fa-caret-down"></i>
-        </button>
-        <div class="dropdown-content">
-          <a href="mission.html">Mission</a>
-          <span><a href="people.html">People</a></span>
-          <span><a href="partners.html">Partners</a></span>
-          <span><a href="contact.html">Contact</a></span>
-        </div>
-      </div>
-      <a href="programmes.html"
-        ><i class="fa-solid fa-chalkboard-user"></i> Programmes</a
-      >
-      <a href="contests.html"><i class="fa-solid fa-trophy"></i> Contests</a>
-      <a href="javascript:void(0)" class="icon" onclick="ResponsiveDropdown()">
-        <i class="fa-solid fa-bars"></i>
-      </a>
-    </div>
-
+    <header-component></header-component>
     <div class="content">
       <div class="parallax"></div>
 
@@ -470,6 +446,12 @@
           }
         });
       }
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        document.getElementById("Contact").className += " active";
+      });
     </script>
   </body>
 </html>

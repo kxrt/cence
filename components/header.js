@@ -16,23 +16,22 @@ class Header extends HTMLElement {
     <header>
         <!-- Responsive Topnav -->
         <div class="topnav" id="myTopnav">
-            <a href="/" class="active"> <i class="fa-solid fa-code"></i> CeNCE</a>
-            <!-- <a href="about.html" class = "active"><i class="fa-regular fa-face-laugh-wink"></i>  About</a> -->
+            <a href="/" id="CeNCE"> <i class="fa-solid fa-code"></i> CeNCE</a>
             <div class="dropdown">
                 <button class="dropbtn" type="button">
                 <i class="fa-regular fa-face-laugh-wink"></i> About
                 <i class="fa fa-caret-down"></i>
                 </button>
                 <div class="dropdown-content">
-                <a href="mission.html">Mission</a>
-                <span><a href="people.html">People</a></span>
-                <span><a href="partners.html">Partners</a></span>
-                <span><a href="contact.html">Contact</a></span>
+                <a href="mission.html" id="Mission">Mission</a>
+                <span><a href="people.html" id="People">People</a></span>
+                <span><a href="partners.html" id="Partners">Partners</a></span>
+                <span><a href="contact.html" id="Contact">Contact</a></span>
                 </div>
             </div>
-            <a href="programmes.html"><i class="fa-solid fa-chalkboard-user"></i> Courses</a>
-            <a href="events.html"><i class="fa-solid fa-calendar"></i> Events</a>
-            <a href="contests.html"><i class="fa-solid fa-trophy"></i> Contests</a>
+            <a href="programmes.html" id="Courses"><i class="fa-solid fa-chalkboard-user"></i> Courses</a>
+            <a href="events.html" id="Events"><i class="fa-solid fa-calendar"></i> Events</a>
+            <a href="contests.html" id="Contests"><i class="fa-solid fa-trophy"></i> Contests</a>
             <a href="javascript:void(0)" class="icon" onclick="ResponsiveDropdown()">
                 <i class="fa-solid fa-bars"></i>
             </a>
